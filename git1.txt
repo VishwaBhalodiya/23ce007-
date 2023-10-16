@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    float cgpa[8]; // Declare an array to store CGPA for 8 semesters
+    
+    // Input CGPA values for 8 semesters
+    for (int i = 0; i < 8; i++) {
+        printf("Enter CGPA for Semester %d: ", i + 1);
+        scanf("%f", &cgpa[i]);
+        
+        // Check if CGPA is valid (typically between 0 and 10)
+        if (cgpa[i] < 0 || cgpa[i] > 10) {
+            printf("Invalid CGPA. Replacing with 0.\n");
+            cgpa[i] = 0;
+        }
+    }
+
+    // Display the corrected CGPA values
+    printf("Corrected CGPA values:\n");
+    for (int i = 0; i < 8; i++) {
+        printf("Semester %d: %.2f\n", i + 1, cgpa[i]);
+    }
+
+    return 0;
+}
