@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+int y=10;
+int Rajiv,Preet,Raj,Ritul;
+clrscr();
+Rajiv=++y;
+Preet=--Rajiv;
+Raj=Preet++;
+Ritul=Raj--;
+printf("Count Before Execution: %d",y);
+printf("\nCount After Execution: %d",Ritul);
+getch();
+return 0;
+}
